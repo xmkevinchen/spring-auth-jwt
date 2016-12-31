@@ -5,6 +5,8 @@ server.port: 9191
 
 config:
   jwt:
+    # openssl genrsa -out jwt.pem 2048
+    # openssl rsa -in jwt.pem
     privateKey: |
       -----BEGIN RSA PRIVATE KEY-----
       MIIEpgIBAAKCAQEAy9+FFSg+Rzhmp0ZAqgsDcjQgXeRsLDk+rfWTH6ieA0FjaVEH
@@ -34,6 +36,7 @@ config:
       TAtbb2qK49Kv0AVQEWKzST1hy5PsndMu6eN13u/9skUVkymZfc2QjMmU
       -----END RSA PRIVATE KEY-----
 
+    # openssl rsa -in jwt.pem -pubout
     publicKey: |
       -----BEGIN PUBLIC KEY-----
       MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy9+FFSg+Rzhmp0ZAqgsD
